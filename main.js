@@ -6,7 +6,7 @@ const OpenAI = require("openai");
 
 // Initialize OpenAI client
 const openai = new OpenAI({
-  apiKey: "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" // Replace with your actual OpenAI API key
+  apiKey: process.env.OPENAI_API_KEY || "YOUR_OPENAI_API_KEY"
 });
 
 const prompt = `
@@ -22,7 +22,7 @@ Transcript:
 `;
 
 // --- Configuration ---
-const YOUR_ASSEMBLYAI_API_KEY = "75164264667c4a64a1f8717d3644d02d"; // Replace with your actual API key
+const YOUR_ASSEMBLYAI_API_KEY = process.env.ASSEMBLYAI_API_KEY || "YOUR_ASSEMBLYAI_API_KEY"; // Set via environment variable
 const CONNECTION_PARAMS = {
   sample_rate: 16000,
   format_turns: true, // Request formatted final transcripts
@@ -159,12 +159,12 @@ async function run() {
 
   // Check API keys
   if (YOUR_ASSEMBLYAI_API_KEY === "YOUR_ASSEMBLYAI_API_KEY") {
-    console.error("❌ Please set your AssemblyAI API key in the code.");
+    console.error("❌ Please set your AssemblyAI API key via the ASSEMBLYAI_API_KEY environment variable.");
     return;
   }
-  
+
   if (openai.apiKey === "YOUR_OPENAI_API_KEY") {
-    console.error("❌ Please set your OpenAI API key in the code.");
+    console.error("❌ Please set your OpenAI API key via the OPENAI_API_KEY environment variable.");
     return;
   }
 

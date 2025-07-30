@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "841a94c2-6bc3-4bb5-93c2-d6f9ece97cfe",
+      "username": "test",
+      "passwordHash": "30c952fab122c3f9759f02a6d95c3758b246b4fee239957b2d4fee46e26170c4"
+    }
+  ],
+  "notes": [
+    {
+      "id": "88683f6c-18a7-4b92-aa13-a8aa2baf113c",
+      "userId": "841a94c2-6bc3-4bb5-93c2-d6f9ece97cfe",
+      "transcript": "Hello world",
+      "notes": "Notes for: Hello world",
+      "createdAt": 1753840576037
+    }
+  ],
+  "tokens": {
+    "a9bc4a9d65628d1286cea5f63372d5bf": "841a94c2-6bc3-4bb5-93c2-d6f9ece97cfe",
+    "997284b833df8e66097fa655ec6dca4e": "841a94c2-6bc3-4bb5-93c2-d6f9ece97cfe"
+  }
+}
